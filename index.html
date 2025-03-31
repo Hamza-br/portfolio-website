@@ -107,9 +107,96 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+<!-- Projects Section -->
     <section id="projects" class="projects">
-        <!-- We'll add this content in the next step -->
+        <div class="section-container">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Pulmonary Embolism Project -->
+                <div class="project-card" data-category="ai">
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="public/images/projects/pulmonary.jpg" alt="Pulmonary Embolism Detection">
+                        </div>
+                        <div class="project-info">
+                            <h3>Pulmonary Embolism Detection</h3>
+                            <p>AI-powered system for detecting pulmonary embolism using deep learning and computer vision techniques.</p>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span class="stat-title">Accuracy</span>
+                                    <span class="stat-value">92.50%</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-title">Dataset</span>
+                                    <span class="stat-value">10K+ Images</span>
+                                </div>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">CUDA</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Hamza-br/pulmonary-embolism-detection" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pneumonia Detection Project -->
+                <div class="project-card" data-category="ai">
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="public/images/projects/pneumonia.jpg" alt="Pneumonia Detection">
+                        </div>
+                        <div class="project-info">
+                            <h3>Pneumonia Detection System</h3>
+                            <p>Deep learning-based system for detecting pneumonia in chest X-rays using EfficientNet architecture.</p>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span class="stat-title">Accuracy</span>
+                                    <span class="stat-value">87.05%</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-title">Model</span>
+                                    <span class="stat-value">EfficientNet</span>
+                                </div>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">Tkinter</span>
+                                <span class="tech-tag">CUDA</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Hamza-br/pneumonia-detection" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->

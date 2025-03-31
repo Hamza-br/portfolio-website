@@ -172,3 +172,144 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Projects Section Styles */
+.projects {
+    background: rgba(10, 25, 47, 0.7);
+}
+
+.projects-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    background: none;
+    border: 2px solid var(--primary-color);
+    color: var(--text-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Courier New', monospace;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);
+    color: var(--background-color);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: rgba(45, 0, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    color: var(--heading-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.project-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-title {
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+
+.stat-value {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: flex-end;
+    background: rgba(10, 25, 47, 0.5);
+}
+
+.project-link {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--primary-color);
+}
+
+/* Animation classes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
