@@ -164,3 +164,42 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Loading Screen
+window.addEventListener('load', () => {
+    const loadingScreen = document.querySelector('.loading-screen');
+    setTimeout(() => {
+        loadingScreen.classList.add('hidden');
+    }, 1000);
+});
+
+// Scroll to Top Button
+const scrollButton = document.querySelector('.scroll-top');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+        scrollButton.classList.add('visible');
+    } else {
+        scrollButton.classList.remove('visible');
+    }
+});
+
+scrollButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Navbar Scroll Effect
+const navbar = document.querySelector('.navbar');
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+    if (lastScrollY < window.scrollY) {
+        navbar.classList.add('nav-hidden');
+    } else {
+        navbar.classList.remove('nav-hidden');
+    }
+    lastScrollY = window.scrollY;
+});
