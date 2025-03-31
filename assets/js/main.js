@@ -40,3 +40,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start the typewriter effect
     typeWriter();
 });
+
+// Add scroll animation for sections
+const observerOptions = {
+    threshold: 0.2
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('section').forEach(section => {
+    section.classList.add('fade-in');
+    observer.observe(section);
+});
